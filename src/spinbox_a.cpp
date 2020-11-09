@@ -130,6 +130,7 @@ SpinBoxA::~SpinBoxA()
 	current_id--;
 
 	m_sba_api->save(*m_settings);
+
 	delete m_sba_api;
 	delete m_settings;
 	delete ui;

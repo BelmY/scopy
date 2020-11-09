@@ -45,7 +45,7 @@ QMainWindow > .QWidget > .adiscope--MenuAnim {
 }
 
 QwtPlot, QwtPolarPlot, pv--view--Viewport, adiscope--SignalGenerator #plot_2, adiscope--Oscilloscope #widgetPlotContainer, adiscope--NetworkAnalyzer #widgetPlotContainer  {
-	background-color: black;
+        background-color: rgba(0, 0, 0, 255);
 }
 
 /* QwtPlot should have a black background, except the sismographs */

@@ -33,6 +33,8 @@
 #include "scopyApplication.hpp"
 #include <stdio.h>
 
+#include "coloreditor.h"
+
 
 using namespace adiscope;
 
@@ -139,6 +141,9 @@ int main(int argc, char **argv)
 	app.installTranslator(&myappTranslator);
 
 	ToolLauncher launcher(prevCrashDump);
+
+	ColorEditor colorEditor(&app);
+	colorEditor.show();
 
 	bool nogui = parser.isSet("nogui");
 	bool nodecoders = parser.isSet("nodecoders");
