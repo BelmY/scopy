@@ -10,6 +10,9 @@
 #include <QLabel>
 #include <QDebug>
 #include <QApplication>
+#include <QTabWidget>
+
+#include "application_restarter.h"
 
 #include <iostream>
 
@@ -25,14 +28,27 @@ ColorEditor::ColorEditor(QApplication *app, QWidget *parent)
 	auto layout = new QVBoxLayout();
 	setLayout(layout);
 
+	QPushButton *restart = new QPushButton("Restart Scopy!");
+	connect(restart, &QPushButton::clicked, [=](){
+		adiscope::ApplicationRestarter::triggerRestart();
+	});
+
+	layout->addWidget(restart);
+
 	m_textEdit = new QTextEdit();
-	layout->addWidget(m_textEdit);
+//	layout->addWidget(m_textEdit);
 
-//	textEdit->setText(QString::fromLatin1(file.readAll()));
-
+	QTabWidget *tabs = new QTabWidget();
 
 	m_scrollArea = new QScrollArea();
-	layout->insertWidget(0, m_scrollArea);
+//	layout->insertWidget(0, m_scrollArea);
+
+	tabs->addTab(m_scrollArea, "Item List");
+	tabs->addTab(m_textEdit, "Advanced Editor");
+
+	tabs->setMovable(true);
+
+	layout->insertWidget(0, tabs);
 
 	auto scrollAreaWidget = new QWidget();
 	auto scrollAreaLayout = new QVBoxLayout();
@@ -263,6 +279,24 @@ void ColorEditor::rebuildAndApplyStylesheet()
 
 	m_textEdit->setText(stylesheet);
 	m_app->setStyleSheet(stylesheet);
+}
+
+void ColorEditor::createNewFile()
+{
+
+}
+
+void ColorEditor::loadFile()
+{
+
+}
+
+QString ColorEditor::getStyleSheet() const
+{
+	QFile file(":/stylesheets/stylesheets/global.qss");
+	file.open(QFile::ReadOnly);
+
+	return QString::fromLatin1(file.readAll());
 }
 
 void ColorEditor::changeColor()

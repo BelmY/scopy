@@ -30,6 +30,7 @@
 #include <QFileInfo>
 #include <QTextStream>
 #include <scopyApplication.hpp>
+#include "detachedwindowsmanager.h"
 
 
 using namespace adiscope;
@@ -64,7 +65,8 @@ Preferences::Preferences(QWidget *parent) :
 	m_instrument_notes_active(false),
 	m_debug_messages_active(false),
 	m_attemptTempLutCalib(false),
-	m_skipCalIfCalibrated(true)
+	m_skipCalIfCalibrated(true),
+	m_colorEditor(nullptr)
 {
 	ui->setupUi(this);
 
@@ -236,6 +238,51 @@ Preferences::Preferences(QWidget *parent) :
 		m_displaySamplingPoints = (!state ? false : true);
 		Q_EMIT notify();
 	});
+
+	auto displayColorEditorButton = new QPushButton("Edit Theme", ui->general);
+	auto hboxLayout = new QHBoxLayout();
+	hboxLayout->addWidget(displayColorEditorButton);
+	hboxLayout->addSpacerItem(new QSpacerItem(0, 0, QSizePolicy::Expanding, QSizePolicy::Expanding));
+	hboxLayout->setContentsMargins(40, 15, 0, 0);
+	ui->generalLayout->insertLayout(1, hboxLayout);
+	displayColorEditorButton->setMinimumWidth(100);
+
+	displayColorEditorButton->setStyleSheet("QPushButton"
+						"{"
+						  "color:#ffffff;"
+						  "height: 20px;"
+						  "border-radius: 4px;"
+						  "background-color: #4a64ff;"
+						  "font-size: 14px;"
+						  "font-weight: normal;"
+						  "font-style: normal;"
+						  "text-align: center;"
+						"}"
+
+						"QPushButton:hover"
+						"{"
+						"	 background-color: #4a34ff;"
+						"}");
+	connect(displayColorEditorButton, &QPushButton::clicked, [=](){
+		const bool visible = m_colorEditor->isVisible();
+		if (visible) {
+			auto window = qobject_cast<DetachedWindow *>(m_colorEditor->parent()->parent());
+			window->showWindow();
+		} else {
+			m_colorEditor->setVisible(true);
+			auto window = DetachedWindowsManager::getInstance().getWindow();
+			window->setCentralWidget(m_colorEditor);
+			window->setWindowTitle("Scopy - Theme editor");
+			window->show();
+			connect(window, &DetachedWindow::closed, [=](){
+				if (window->centralWidget() == m_colorEditor) {
+					m_colorEditor->setVisible(false);
+					DetachedWindowsManager::getInstance().returnWindow(window);
+				}
+			});
+		}
+	});
+
 }
 
 QStringList Preferences::getOptionsList()
@@ -570,6 +617,11 @@ bool Preferences::getSkipCalIfCalibrated() const
 void Preferences::setSkipCalIfCalibrated(bool val)
 {
 	m_skipCalIfCalibrated = val;
+}
+
+void Preferences::setColorEditor(ColorEditor *colorEditor)
+{
+	m_colorEditor = colorEditor;
 }
 
 bool Preferences_API::getAnimationsEnabled() const

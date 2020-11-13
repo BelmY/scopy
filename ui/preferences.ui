@@ -84,7 +84,7 @@ QCheckBox::indicator:checked { background-color: rgb(74,100,255); }</string>
       </item>
       <item>
        <widget class="QWidget" name="general" native="true">
-        <layout class="QVBoxLayout" name="verticalLayout_3">
+        <layout class="QVBoxLayout" name="generalLayout">
          <property name="spacing">
           <number>0</number>
          </property>

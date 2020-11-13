@@ -16,6 +16,7 @@ class ColorEditor : public QWidget
 	Q_OBJECT
 public:
 	explicit ColorEditor(QApplication *app, QWidget *parent = nullptr);
+	QString getStyleSheet() const;
 
 private:
 	void buildMenuForMap();
@@ -25,6 +26,9 @@ private:
 	                     QPushButton *btn);
 
 	void rebuildAndApplyStylesheet();
+
+	void createNewFile();
+	void loadFile();
 
 private	Q_SLOTS:
 	void changeColor();

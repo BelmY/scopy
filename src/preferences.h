@@ -26,6 +26,7 @@
 #include <QSettings>
 
 #include "apiObject.hpp"
+#include "coloreditor.h"
 
 
 namespace Ui {
@@ -123,6 +124,8 @@ public:
 	bool getSkipCalIfCalibrated() const;
 	void setSkipCalIfCalibrated(bool val);
 
+	void setColorEditor(ColorEditor *colorEditor);
+
 Q_SIGNALS:
 
 	void notify();
@@ -169,6 +172,8 @@ private:
 	bool m_skipCalIfCalibrated;
 
 	Preferences_API *pref_api;
+
+	ColorEditor *m_colorEditor;
 };
 
 class Preferences_API : public ApiObject
