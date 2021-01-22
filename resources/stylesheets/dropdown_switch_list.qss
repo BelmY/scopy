@@ -1,6 +1,6 @@
 adiscope--DropdownSwitchList {
   height: 30px;
-  color: rgba(255, 255, 255, 102);
+  color: black;
   border: 0px;
   font-size: 18px;
   border-radius: 4px;
@@ -8,8 +8,8 @@ adiscope--DropdownSwitchList {
 }
 
 adiscope--DropdownSwitchList:editable{
-  background-color: #141416;
-  color: white;
+  background-color: #F7F7F7;
+  color: black;
 }
 
 adiscope--DropdownSwitchList::drop-down {
@@ -22,7 +22,7 @@ adiscope--DropdownSwitchList::drop-down {
 
 adiscope--DropdownSwitchList QAbstractItemView {
   border: 0px;
-  background-color: #141416;
+  background-color: #F7F7F7;
   font-size: 18px;
   outline: 0px;
 
@@ -31,12 +31,12 @@ adiscope--DropdownSwitchList QAbstractItemView {
 }
 
 adiscope--DropdownSwitchList QAbstractItemView::item {
-  color: #ffffff;
+  color: black;
   height: 60px;
 }
 
 adiscope--DropdownSwitchList QAbstractItemView::item:hover {
-  background-color: #141416;
+  background-color: #EDEDED;
 }
 
 QHeaderView {
@@ -47,36 +47,42 @@ QHeaderView {
 }
 
 QHeaderView:section {
-  color: rgba(255, 255, 255, 153);
-  background-color: #141416;
+  color: black;
+  background-color: #F7F7F7;
   border: 0px;
   font: 14px;
 }
 
 QCheckBox {
-  background-color: #141416;
+  background-color: #F7F7F7;
 }
 
 QCheckBox::indicator {
-  border: 2px solid rgb(74, 100, 255);
+  border: 2px solid #4A64FF;
   border-radius: 4px;
   width: 16px;
   height: 16px;
-  background-color: #272730;
+  background-color: #F7F7F7;
   subcontrol-position: center;
 }
 
 QCheckBox::indicator:checked {
-  background-color: rgb(74, 100, 255);
+  background-color: #4A64FF;
 }
 
 QScrollBar:vertical {
-  background: #262628;
+  background: #F7F7F7;
   max-width: 8px;
 }
 
 QScrollBar::handle:vertical {
-  background: #4a4a4b;
+  background: #BEBEC1;
+  border: 0;
+  border-radius: 3px;
+}
+
+QScrollBar::handle:vertical:hover {
+  background: #7D7D83;
   border: 0;
   border-radius: 3px;
 }

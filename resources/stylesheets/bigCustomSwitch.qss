@@ -3,7 +3,7 @@ min-height: 30px;
 max-height: 30px;
 min-width: 240px;
 max-width: 240px;
-background-color: black;
+background-color: #FFFFFF;
 border-radius: 4px;
 }
 
@@ -42,7 +42,7 @@ color: white;
 }
 
 QLabel#on:disabled {
-color: rgba(255,255,255,102);
+color: #C5C5C5;
 }
 
 QLabel#off {
@@ -57,5 +57,5 @@ qproperty-alignment: AlignCenter AlignCenter;
 }
 
 QLabel#off:disabled {
-color: rgba(255,255,255,51);
+color: #C5C5C5;
 }

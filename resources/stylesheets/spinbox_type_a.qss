@@ -25,7 +25,7 @@ QPushButton#SBA_DownButton:hover:!pressed {
 }
 
 QLabel#SBA_Label {
-  color: rgba(255, 255, 255, 102);
+  color: black;
   font-size: 14px;
 }
 
@@ -68,6 +68,6 @@ QComboBox#SBA_Combobox::drop-down:disabled {
 }
 
 QDial#SBA_CompletionCircle {
-  background-color: black;
+  background-color: #BEBEC1;
   color: #4963ff;
 }

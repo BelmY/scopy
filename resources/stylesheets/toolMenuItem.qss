@@ -2,6 +2,7 @@ QPushButton {
     text-align:left;
     border: none;
     background-color: none;
+    color: black;
 }
 QWidget[allowHover=true]:hover {
     background-color: rgba(0, 0, 0, 60);

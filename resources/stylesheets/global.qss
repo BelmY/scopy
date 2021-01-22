@@ -1,6 +1,6 @@
 /* Default background color */
 QMainWindow > .QWidget, adiscope--Sismograph > QwtPlotCanvas, QMessageBox, QToolTip {
-	background-color: #272730;
+	background-color: #F7F7F7;
 }
 
 /* Default settings for QWidget and its sub-classes */
@@ -12,28 +12,33 @@ QWidget {
 	font-size: 13px;
 }
 
+/* Default settings for QToolTip */
 QToolTip {
     padding: 6px;
     border: 1px solid rgba(149, 152, 154, 150);
-    color: white;
+    color: #000000;
 }
 
+/* Default settings for QLabel */
 QLabel {
-	color: rgba(255, 255, 255, 150);
+	color: black;
 	font-size: 13px;
 	font-style: normal;
 	font-weight: normal;
 	text-align: left;
 }
 
+/* Default settings for QToolTip:disabled and QRadioButton:disabled */
 QLabel:disabled, QRadioButton:disabled {
-	color: rgba(255, 255, 255, 80);
+	color: #C5C5C5;
 }
 
+/* Default settings for QTextBrowser*/
 QTextBrowser {
-	background-color: rgba(0, 0, 0, 150);
+	background-color: #FFFFFF;
 }
-/* Apply a gradiant to the MenuAnim widgets */
+
+/* Applying a gradient to the MenuAnim widgets */
 adiscope--MenuAnim {
 	background-color: qlineargradient(spread:pad, x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 rgba(0, 0, 0, 40), stop: 0.15 transparent, stop: 0.85 transparent, stop: 1.0 rgba(0, 0, 0, 40));
 }
@@ -44,16 +49,16 @@ QMainWindow > .QWidget > .adiscope--MenuAnim {
 }
 
 QwtPlot, QwtPolarPlot, pv--view--Viewport, adiscope--SignalGenerator #plot_2, adiscope--Oscilloscope #widgetPlotContainer, adiscope--NetworkAnalyzer #widgetPlotContainer  {
-	background-color: black;
+	background-color: #FFFFFF;
 }
 
-/* QwtPlot should have a black background, except the sismographs */
+/* QwtPlot should have a white background, except the sismographs */
 adiscope--Sismograph {
 	background-color: transparent;
 }
 
 QwtPlotCanvas {
-	background-color: #141416;
+	background-color: #FFFFFF;
 }
 
 QwtPolarCanvas {
@@ -61,7 +66,7 @@ QwtPolarCanvas {
 }
 
 QwtScaleWidget {
-	color: rgba(255, 255, 255, 180);
+	color: #FFFFFF;
 }
 
 QwtThermo {
@@ -72,18 +77,18 @@ QwtThermo {
 adiscope--BufferPreviewer {
 	border: 1px solid #7092be;
 	alternate-background-color: #4a64ff;
-	selection-background-color: #141416;
+	selection-background-color: #EDEDED;
 	selection-color: #ff7200;
 	color: white;
 }
 
 QDial {
-  background-color: black;
+  background-color: #FFFFFF;
   color: #4963ff;
 }
 
 QTabWidget::tab-bar {
-        left: 0;
+	left: 0;
 }
 
 QTabWidget::pane {
@@ -94,7 +99,7 @@ QTabBar::tab {
 	min-width: 100px;
 	min-height: 32px;
 	padding-bottom: 5px;
-        font: normal;
+	font: normal;
 }
 
 QTabBar::tab:selected {
@@ -109,7 +114,7 @@ QTabBar::tab:!selected {
 }
 
 QRadioButton {
-	color: white;
+	color: black;
 	spacing: 12px;
 }
 
@@ -134,10 +139,10 @@ QRadioButton::indicator:checked:disabled {
 }
 
 QLineEdit {
-	color: white;
+	color: black;
 	font-size: 16px;
 	border: 0px solid gray;
-	border-bottom: 1px solid rgba(255, 255, 255, 102);
+	border-bottom: 1px solid black;
 	padding: 2px;
 }
 
@@ -146,7 +151,7 @@ QComboBox {
 	border: none;
 	font-size: 14px;
 
-	border-bottom: 1px solid rgba(255, 255, 255, 102);
+	border-bottom: 1px solid black;
 	padding-bottom: 4px;
 }
 
@@ -157,9 +162,9 @@ QComboBox:disabled, QLineEdit:disabled
 
 QComboBox QAbstractItemView {
 	border: none;
-	background-color: #1b1b21;
+	background-color: #FFFFFF;
 	text-align: left;
-	color: #bebebe;
+	color: #FFFFFF;
 	outline: none;
 
 	border-bottom: 1px solid #bebebe;
@@ -168,7 +173,7 @@ QComboBox QAbstractItemView {
 
 /* This only works on Windows */
 QComboBox QAbstractItemView {
-	selection-background-color: #272730;
+	selection-background-color: #FFFFFF;
 }
 
 /* This does not work on Windows */
@@ -176,7 +181,7 @@ QComboBox::item:selected {
 	font-weight: bold;
 	font-size: 18px;
 	border-bottom: 0px solid none;
-	background-color: #272730;
+	background-color: #F7F7F7;
 }
 
 QComboBox::drop-down {
@@ -198,7 +203,7 @@ QComboBox::indicator {
 QMessageBox QLabel {
 	height: 420px;
 	width: 680px;
-	color: rgba(255,255,255,240);
+	color: black;
 	font-size: 14px;
 	font: bold;
 }
@@ -275,17 +280,18 @@ QGroupBox::title {
 }
 
 QScrollBar:vertical {
-  background: #262628;
+  background: #F7F7F7;
   max-width: 8px;
 }
 
 QScrollBar::handle:vertical {
-  background: #404040;
+  background: #BEBEC1;
   border: 0;
   border-radius: 3px;
 }
+
 QScrollBar::handle:vertical:hover {
-  background: #4a4a4b;
+  background: #7D7D83;
   border: 0;
   border-radius: 3px;
 }
@@ -300,19 +306,19 @@ QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
 }
 
 QScrollBar:horizontal {
-  background: #262628;
+  background: #F7F7F7;
   max-height: 6px;
   border-radius: 3px;
 }
 
 QScrollBar::handle:horizontal {
-  background: #404040;
+  background: #BEBEC1;
   border: 0;
   border-radius: 3px;
 }
 
 QScrollBar::handle:horizontal:hover {
-  background: #4a4a4b;
+  background: #7D7D83;
   border: 0;
   border-radius: 3px;
 }
@@ -327,7 +333,7 @@ QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
 }
 
 QDialog {
-	background-color: #1b1b21;
+	background-color: #FFFFFF;
 }
 
 ScopyAboutDialog QPushButton{
