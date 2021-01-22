@@ -530,13 +530,7 @@ QPushButton:checked:hover {
         <item>
          <widget class="adiscope::MenuAnim" name="rightMenu" native="true">
           <property name="styleSheet">
-           <string notr="true">QWidget#rightMenu {
-  background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(35, 35, 43, 255), stop:0.1 rgba(39, 39, 48, 255), stop: 0.9 rgba(39, 39, 48, 255), stop: 1 rgba(35, 35, 43, 255));
-}
-
-QWidget {
-   background-color: rgba(39, 39, 48, 255);
-}</string>
+           <string notr="true"/>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_2">
            <property name="spacing">
@@ -796,80 +790,80 @@ QPushButton:hover
                  </item>
                 </layout>
                </item>
-                  <item>
-                      <layout class="QVBoxLayout" name="verticalLayout_13">
-                          <property name="spacing">
-                              <number>5</number>
-                          </property>
-                          <property name="topMargin">
-                              <number>0</number>
-                          </property>
-                          <item>
-                              <widget class="QLabel" name="label_thickness">
-                                  <property name="styleSheet">
-                                      <string notr="true"> font-size: 13px;</string>
-                                  </property>
-                                  <property name="text">
-                                      <string>CH Thickness</string>
-                                  </property>
-                              </widget>
-                          </item>
-                          <item>
-                              <widget class="QComboBox" name="comboBox_line_thickness">
-                                  <item>
-                                      <property name="text">
-                                          <string>0.5</string>
-                                      </property>
-                                  </item>
-                                  <item>
-                                      <property name="text">
-                                          <string>1</string>
-                                      </property>
-                                  </item>
-                                  <item>
-                                      <property name="text">
-                                          <string>1.5</string>
-                                      </property>
-                                  </item>
-                                  <item>
-                                      <property name="text">
-                                          <string>2</string>
-                                      </property>
-                                  </item>
-                                  <item>
-                                      <property name="text">
-                                          <string>2.5</string>
-                                      </property>
-                                  </item>
-                                  <item>
-                                      <property name="text">
-                                          <string>3</string>
-                                      </property>
-                                  </item>
-                                  <item>
-                                      <property name="text">
-                                          <string>3.5</string>
-                                      </property>
-                                  </item>
-                                  <item>
-                                      <property name="text">
-                                          <string>4</string>
-                                      </property>
-                                  </item>
-                                  <item>
-                                      <property name="text">
-                                          <string>4.5</string>
-                                      </property>
-                                  </item>
-                                  <item>
-                                      <property name="text">
-                                          <string>5</string>
-                                      </property>
-                                  </item>
-                              </widget>
-                          </item>
-                      </layout>
-                  </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_13">
+                 <property name="spacing">
+                  <number>5</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="label_thickness">
+                   <property name="styleSheet">
+                    <string notr="true"> font-size: 13px;</string>
+                   </property>
+                   <property name="text">
+                    <string>CH Thickness</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBox_line_thickness">
+                   <item>
+                    <property name="text">
+                     <string>0.5</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>1</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>1.5</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>2</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>2.5</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>3</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>3.5</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>4</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>4.5</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>5</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
                <item>
                 <layout class="QVBoxLayout" name="verticalLayout_15">
                  <property name="spacing">
@@ -2549,26 +2543,26 @@ QLabel {
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>adiscope::CustomPushButton</class>
-   <extends>QPushButton</extends>
-   <header>customPushButton.hpp</header>
-  </customwidget>
-  <customwidget>
    <class>adiscope::RunSingleWidget</class>
    <extends>QWidget</extends>
    <header>runsinglewidget.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>adiscope::CustomSwitch</class>
-   <extends>QPushButton</extends>
-   <header>customSwitch.hpp</header>
-  </customwidget>
-  <customwidget>
    <class>adiscope::InstrumentNotes</class>
    <extends>QWidget</extends>
    <header>instrumentnotes.h</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>adiscope::CustomPushButton</class>
+   <extends>QPushButton</extends>
+   <header>customPushButton.hpp</header>
+  </customwidget>
+  <customwidget>
+   <class>adiscope::CustomSwitch</class>
+   <extends>QPushButton</extends>
+   <header>customSwitch.hpp</header>
   </customwidget>
   <customwidget>
    <class>adiscope::MarkerTable</class>

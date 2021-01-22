@@ -1351,7 +1351,6 @@ border: 0px;</string>
                       <string notr="true">[selected=true] {
   	opacity: 0.6;
 	border-radius: 4px;
-	background-color: #141416;
 }
 
 [selected=false] {
@@ -1723,18 +1722,6 @@ background-color: #4a34ff;
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
   <customwidget>
-   <class>adiscope::StackedHomepage</class>
-   <extends>QStackedWidget</extends>
-   <header>stacked_homepage.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>adiscope::OscCustomScrollArea</class>
-   <extends>QScrollArea</extends>
-   <header>osc_custom_scroll.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
    <class>adiscope::DetachDragZone</class>
    <extends>QWidget</extends>
    <header>detachdragzone.h</header>
@@ -1744,6 +1731,18 @@ background-color: #4a34ff;
    <class>adiscope::MenuAnim</class>
    <extends>QWidget</extends>
    <header>menu_anim.hpp</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>adiscope::StackedHomepage</class>
+   <extends>QStackedWidget</extends>
+   <header>stacked_homepage.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>adiscope::OscCustomScrollArea</class>
+   <extends>QScrollArea</extends>
+   <header>osc_custom_scroll.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
