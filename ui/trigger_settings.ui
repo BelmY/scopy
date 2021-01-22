@@ -50,9 +50,9 @@
    <item>
     <widget class="QLabel" name="label_title">
      <property name="styleSheet">
-      <string notr="true">color: white;
-        font-size: 14px;
-        font-weight: normal;
+      <string notr="true">color: black;
+ont-size: 14px;
+ont-weight: normal;
 </string>
      </property>
      <property name="text">
@@ -115,7 +115,7 @@
         <x>0</x>
         <y>0</y>
         <width>266</width>
-        <height>929</height>
+        <height>942</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_4">

@@ -41,39 +41,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">
-QWidget#mainWidget
-{
-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.1, y2:0, stop:0 rgba(0, 0, 0, 40), stop:1 transparent);
-}
-
-/* QComboBoxes*/
-QComboBox
-{
-  height: 24px;
-  border: 0px;
-  color: white;
-  font-size: 14px;
-  border-bottom: 1px solid rgba(255, 255, 255, 102);
-  padding-bottom: 4px;
-}
-QComboBox::drop-down
-{
-  subcontrol-position: center right;
-  width: 10px;
-  height: 6px;
-  border-image: url(:/icons/sba_cmb_box_arrow.svg);
-}
-QComboBox QAbstractItemView {
-  border: 0px;
-  color: white;
-  selection-background-color: rgba(25, 25, 25);
-  outline: 0px;
-}
-QComboBox:disabled
-{
-  color: rgb(85, 85, 85);
-}</string>
+      <string notr="true"/>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_6">
       <property name="spacing">
