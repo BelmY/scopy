@@ -38,9 +38,7 @@
    <item>
     <widget class="adiscope::DetachDragZone" name="mainWidget" native="true">
      <property name="styleSheet">
-      <string notr="true">#mainWidget {
-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.1, y2:0, stop:0 rgba(0, 0, 0, 40), stop:1 transparent);
-}</string>
+      <string notr="true"/>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <property name="spacing">
@@ -104,9 +102,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.1, y2:0, stop:0 r
         </property>
         <item>
          <widget class="QWidget" name="plot_and_notes" native="true">
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(0, 0, 0);</string>
-          </property>
           <layout class="QVBoxLayout" name="plot">
            <property name="spacing">
             <number>0</number>
@@ -253,14 +248,14 @@ QTabBar::tab:!selected {
   margin-top: 0px;
 }
 QTabBar::tab:selected {
-  color: white;
+  color: black;
   border-bottom: 2px solid rgba(74, 100, 255);
   margin-top: 0px;
 }
 </string>
                  </property>
                  <property name="currentIndex">
-                  <number>1</number>
+                  <number>3</number>
                  </property>
                  <property name="usesScrollButtons">
                   <bool>false</bool>
@@ -569,7 +564,7 @@ QTabBar::tab:selected {
                        <property name="styleSheet">
                         <string notr="true">  QLabel {
         font-size: 12px;
-        color: rgba(255, 255, 255, 70);
+        color: black;
     }</string>
                        </property>
                        <property name="text">
@@ -592,7 +587,7 @@ QTabBar::tab:selected {
                         </size>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">border: 1px solid rgba(255, 255, 255, 70);</string>
+                        <string notr="true">border: 1px solid black;</string>
                        </property>
                        <property name="orientation">
                         <enum>Qt::Horizontal</enum>
@@ -896,7 +891,7 @@ QPushButton:hover
                        <property name="styleSheet">
                         <string notr="true">  QLabel {
         font-size: 12px;
-        color: rgba(255, 255, 255, 70);
+        color: black;
     }</string>
                        </property>
                        <property name="text">
@@ -919,7 +914,7 @@ QPushButton:hover
                         </size>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">border: 1px solid rgba(255, 255, 255, 70);</string>
+                        <string notr="true">border: 1px solid black;</string>
                        </property>
                        <property name="orientation">
                         <enum>Qt::Horizontal</enum>
@@ -1076,7 +1071,7 @@ border-image: url(:/icons/sba_cmb_box_arrow_right.svg);
                       <property name="styleSheet">
                        <string notr="true">  QLabel {
         font-size: 12px;
-        color: rgba(255, 255, 255, 70);
+        color: black;
     }</string>
                       </property>
                       <property name="text">
@@ -1105,7 +1100,7 @@ border-image: url(:/icons/sba_cmb_box_arrow_right.svg);
                        </size>
                       </property>
                       <property name="styleSheet">
-                       <string notr="true">border: 1px solid rgba(255, 255, 255, 70);</string>
+                       <string notr="true">border: 1px solid black;</string>
                       </property>
                       <property name="orientation">
                        <enum>Qt::Horizontal</enum>
@@ -1239,7 +1234,7 @@ QPushButton:checked
                       <property name="styleSheet">
                        <string notr="true">  QLabel {
         font-size: 12px;
-        color: rgba(255, 255, 255, 70);
+        color: black;
     }</string>
                       </property>
                       <property name="text">
@@ -1268,7 +1263,7 @@ QPushButton:checked
                        </size>
                       </property>
                       <property name="styleSheet">
-                       <string notr="true">border: 1px solid rgba(255, 255, 255, 70);</string>
+                       <string notr="true">border: 1px solid black;</string>
                       </property>
                       <property name="orientation">
                        <enum>Qt::Horizontal</enum>
